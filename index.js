@@ -121,8 +121,8 @@ console.log("Script started: " + length);
       //Thank you https://hacks.mozilla.org/2011/01/how-to-develop-a-html5-image-uploader/
       let canvas = document.createElement("canvas");
       // Feel free to change
-      let MAX_WIDTH = 200;
-      let MAX_HEIGHT = 200;
+      let MAX_WIDTH = 50;
+      let MAX_HEIGHT = 50;
       let width = resizeMe.width;
       let height = resizeMe.height;
 
