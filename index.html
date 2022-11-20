@@ -8,7 +8,7 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Create your 4x6 Passport Photo</title>
+  <title>Create your 600x600 Passport Photo</title>
   <meta name="description" content="Convert your cropped Passport Photo into a 4x6 Photo format to cheaply print!" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!-- CSS only -->
@@ -31,7 +31,7 @@
 
 <div class="row">
   <div class="column" >
-  <h1 style="font-size: 36px; padding-left:15px; text-align: center;">US Passport 4x6 Photo Template</h1>
+  <h1 style="font-size: 36px; padding-left:15px; text-align: center;">US Passport 600x600 Photo Template</h1>
         <p style="padding-left: 15px;">Create a 4x6 photo from your square photo for $ 2.46 only!</p>
   <div><img id="header-image" class="responsive" src="LandingPageBenefit.png" alt="test photo"></div>
   <br>
@@ -57,7 +57,7 @@
           Toggle Orientation
         </button>
         <button id="download" onclick="downloadCanvas()">
-          Download your 4x6 Passport Photo
+          Download your 600x600 Passport Photo
         </button>
         <br>
         <br>
@@ -295,7 +295,7 @@
 
         let file = document.createElement("a");
         file.href = export_photo;
-        file.download = "4x6PassportPhoto";
+        file.download = "600x600PassportPhoto";
         file.click();
       } else {
         console.error("No photo uploaded?")
