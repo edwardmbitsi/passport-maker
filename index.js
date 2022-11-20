@@ -199,7 +199,6 @@ console.log("Script started: " + length);
       canvas.setAttribute("id", "photo_canvas");
       canvas.setAttribute("width", photo_html.width * 2);
       canvas.setAttribute("height", photo_html.height * 3);
-    canvas.setAttribute("style","padding-left:10px;")
       canvas.classList.add("responsive");
       document.body.appendChild(canvas);
       let html_canvas = document
@@ -229,7 +228,6 @@ console.log("Script started: " + length);
       canvas.setAttribute("id", "photo_canvas");
       canvas.setAttribute("width", photo_html.height * 3);
       canvas.setAttribute("height", photo_html.width * 2);
-   canvas.setAttribute("style", "padding-left: 10px;")
       canvas.classList.add("responsive");
       document.body.appendChild(canvas);
       let html_canvas = document
