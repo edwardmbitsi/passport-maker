@@ -261,7 +261,7 @@ console.log("Script started: " + length);
 
         let file = document.createElement("a");
         file.href = export_photo;
-        file.download = "4x6PassportPhoto";
+        file.download = "600x600PassportPhoto";
         file.click();
       } else {
         console.error("No photo uploaded?")
