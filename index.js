@@ -98,7 +98,7 @@ console.log("Script started: " + length);
           isSquare = false;
           fileUploaded = false;
           console.error("Not a square photo, need to resize.");
-          alert("Not a square photo!\nPlease use the photo cropping tool below provided by the US State Department.")
+          alert("Not a square photo!\nPlease use the photo cropping tool provided above by the US State Department.")
         }
         else {
           isSquare = true;
