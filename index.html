@@ -1,356 +1,89 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Create your 600x600 Passport Photo</title>
-  <meta name="description" content="Convert your cropped Passport Photo into a 4x6 Photo format to cheaply print!" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- CSS only -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <title>Visa</title>
 </head>
 
+
+
 <body>
-  <!--[if lt IE 7]>
-      <p class="browsehappy">
-        You are using an <strong>outdated</strong> browser. Please
-        <a href="#">upgrade your browser</a> to improve your experience.
-      </p>
-    <![endif]-->
-
 <nav class="navbar navbar-dark bg-primary">
-  <a class="navbar-brand" href="#" style="padding-left: 15px;">Visafoto</a>
-  <
+  <span class="navbar-brand mb-0 h1" style="font-family: 'Caveat', cursive; font-size: 30px;">GreenCard Web</span>
 </nav>
+<p class="text-center" style="padding: 15px; font-family: 'Signika', sans-serif; font-size: 20px; line-height: 1.1; margin: 0;">US Passport 600x600 Photo Template <br> Create a 600x600 photo from your square photo for Ksh 300 only! <br> Here is a link to a photo cropping tool to get a square passport photo: </br>
+<a href="https://tsg.phototool.state.gov/photo" target="_blank">U.S. Passport Photos - United States Department of State</a></p>
 
-<div class="row">
-  <div class="column" >
-  <h1 style="font-size: 36px; padding-left:15px; text-align: center;">US Passport 600x600 Photo Template</h1>
-        <p style="padding-left: 15px;">Create a 4x6 photo from your square photo for $ 2.46 only!</p>
-  <div><img id="header-image" class="responsive" src="LandingPageBenefit.png" alt="test photo"></div>
-  <br>
-  <h6 style="text-align: center; padding-left: 8px;">
-  Here is a link to a photo cropping tool to get a square passport photo: </br>
-    <a href="https://tsg.phototool.state.gov/photo" target="_blank">U.S. Passport Photos - United States Department of
-      State</a><h6>
-  </div>
-  
-  <div class="column">
-  <div>
-  <br>
-  <br>
-  <br>
-    <br>
-    <br>
-        <div style="padding-left: 15px; text-align: center;">
-        <h1>Upload your photo (JPEG)</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <img src="./LandingPageBenefit.png" alt="person" class="img-thumbnail" style="float: left;">
+
+
+    </div>
+    <div class="col-sm">
+        <br>
+        <h6 style="text-align: center; font-family: 'Pathway Gothic One', sans-serif; font-size: 25px;">Upload your photo (JPEG) <br> ** Square Photo (1:1) **</h6>
         <input type="file" accept="image/jpeg" id="input-photo" />
-        </div>
-        <div class="frame">
-        <button id="orientation-btn" onclick="toggleOrientation()">
+        <button id="orientation-btn" style="font-family: 'Pathway Gothic One', sans-serif; font-size: 15px;" onclick="toggleOrientation()">
           Toggle Orientation
         </button>
-        <button id="download" onclick="downloadCanvas()">
-          Download your 600x600 Passport Photo
+        <button id="download" style="font-family: 'Pathway Gothic One', sans-serif; font-size: 15px;" onclick="downloadCanvas()">
+          Download your Passport Photo
         </button>
-        <br>
-        <br>
-        <h6 style="text-align: center; padding-left: 50px;">Upload your photo before making payment<br>then make a payment to download your photo.</h6>
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div id="smart-button-container;">
-      <div style="text-align: center;">
-        <div id="paypal-button-container" style="width: 50%; float:center; display: inline-block;"></div>
-      </div>
+
     </div>
-      </div>
+    <div class="col-sm">
+    
+    <div class="container mt-5 d-flex justify-content-center">
+       
+        <div class="card p-3 bg-primary ">
+            <div class="d-flex flex-row align-items-center justify-content-between text-white">
+                <div class="d-flex flex-row align-items-center"> <i class="fa fa-angle-left"></i> <span class="ml-2">Contactless Payment</span> </div> </div>
+            <div class="px-0.5"> <span class="button mt-3 d-block bg-white p-2">KSH 300.00</span> </div>
+            <br>
+            <form action="index.php" method="POST">
+            <div class="px-5"> <input  class=" d-block custom2 form-control mt-3 bg-white " type="text"  name="phone-number" placeholder="Phone number"></div>
+           
+            <div class="mt-5 align-items-center d-flex justify-content-center"><button class="btn btn-success  custom bg-lg" type="submit" name="submit">Lipa na Mpesa</button> </div>
+
+
+        </div>
+        </form>
+        <br>
+    </div>
+
+    </div>
+  </div>
+</div> 
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      
+    
+
+    </div>
+    <div class="col-sm">
+        <br>
+      <h6 style="text-align: center; font-family: 'Carter One', cursive;">Upload your photo before making payment <br> then make payment to download your photo.</h6>
+        <br>
+    </div>
+    <div class="col-sm">
+    <div style="text-align: center;">
+    <div id="paypal-button-container" style="height: 15px;"></div>
+    </div>
+    </div>
   </div>
 </div>
 
-  <script>
-    console.log("Script started: " + length);
-    const inputElement = document.getElementById("input-photo");
-    inputElement.addEventListener("change", handleFiles, false);
-    var fileUploaded = false;
-    //If true, portrait 4x6. Else, landscape 4x6
-    /* https://www.w3schools.com/js/js_comments.asp
-      FUN FACT: iOS (and i assume other mobile devices) use the orientation variable name so you can't flip the 4x6 orientation in Safari. 
-      Its a read-only field... yeah i went crazy trying to debug why setting orientation = true... didn't do anything.
-      Changing this to a different name now. woohoo! 1/09/2022
-    */
-    var template_orientation = false;
-    //Global Photo URL
-    var PhotoLiveURL = null;
-    var isSquare = false;
-
-    function handleFiles() {
-      let fileList = this.files; /* now you can work with the file list */
-      if (fileList.length != 0 && fileList[0].type != "image/jpeg") {
-        fileUploaded = false;
-        console.error("Not a JPEG file.")
-        alert("You can only upload a JPEG file at this time.");
-        return;
-      } else if (fileList.length == 0) {
-        fileUploaded = false;
-        console.error("No file uploaded, don't run the rest of the script.");
-        return;
-      }
-      console.log("File uploaded.")
-
-      //If a new file/photo is uploaded, reset photos and canvas, then release ObjectURL
-      if (fileUploaded) {
-        let uploadedTitle = document.getElementById("upload-title");
-        let photo = document.getElementById("uploaded_photo");
-        let currentCanvas = document.getElementById("photo_canvas");
-        let seperator = document.getElementById("seperatorID");
-        uploadedTitle.remove();
-        photo.remove();
-        currentCanvas.remove();
-        seperator.remove();
-
-        delete photo;
-        delete currentCanvas;
-        delete seperator;
-        //Must do memory management for object URLs. They'll be released when the user leaves the website.
-        URL.revokeObjectURL(PhotoLiveURL);
-      }
-      //Only one photo can be uploaded, thus only check 1st element.
-      PhotoLiveURL = URL.createObjectURL(fileList[0]);
-      let checkImg = new Image();
-      checkImg.src = PhotoLiveURL;
-      checkImg.onload = function () {
-        if (checkImg.width != checkImg.height) {
-          isSquare = false;
-          fileUploaded = false;
-          console.error("Not a square photo, need to resize.");
-          alert("Not a square photo!\nPlease use the photo cropping tool below provided by the US State Department.")
-        }
-        else {
-          isSquare = true;
-          //Resize if needed.
-          resize(checkImg);
-          if (isSquare) {
-            console.log("Square photo, show the file.")
-            showFile(fileList);
-            fileUploaded = true;
-          }
-        }
-      };
-    }
-
-    function resize(resizeMe) {
-      console.log("Resizing photo...")
-      if (resizeMe == null || resizeMe.src == null) {
-        return;
-      }
-      //Thank you https://hacks.mozilla.org/2011/01/how-to-develop-a-html5-image-uploader/
-      let canvas = document.createElement("canvas");
-      // Feel free to change
-      let MAX_WIDTH = 200;
-      let MAX_HEIGHT = 200;
-      let width = resizeMe.width;
-      let height = resizeMe.height;
-
-      if (width > height) {
-        if (width > MAX_WIDTH) {
-          height *= MAX_WIDTH / width;
-          width = MAX_WIDTH;
-        }
-      } else {
-        if (height > MAX_HEIGHT) {
-          width *= MAX_HEIGHT / height;
-          height = MAX_HEIGHT;
-        }
-      }
-      canvas.width = width;
-      canvas.height = height;
-      let ctx_temp = canvas.getContext("2d");
-      ctx_temp.drawImage(resizeMe, 0, 0, width, height);
-
-      let resize = canvas.toDataURL("image/jpeg", 1.0);
-      PhotoLiveURL = resize;
-    }
-
-    function showFile(fileList) {
-      console.log("Showing uploaded photo")
-
-      const title = document.createElement("h1");
-      title.innerHTML = "Uploaded File: ";
-      title.setAttribute("style", "padding-top: 140px; text-align: center;")
-      title.id = "upload-title";
-      document.body.appendChild(title);
-
-      let photo_html = new Image();
-      photo_html.src = PhotoLiveURL;
-      photo_html.setAttribute("id", "uploaded_photo");
-      photo_html.setAttribute("style", "display: block; align-content: center; margin-bottom: 1em;");
-      photo_html.classList.add("responsive");
-      photo_html.onload = function () {
-        create4x6_portrait(photo_html);
-      };
-      document.body.appendChild(photo_html);
-
-      template_orientation = true;
-      //Add line break to seperate uploaded photo and 4x6 canvas
-      const seperator = document.createElement("hr");
-      seperator.setAttribute("id", "seperatorID");
-      seperator.setAttribute("style", "margin: 2em");
-      document.body.appendChild(seperator);
-    }
-
-    function toggleOrientation() {
-      if (fileUploaded) {
-        let photo = document.getElementById("uploaded_photo");
-        let currentCanvas = document.getElementById("photo_canvas");
-        currentCanvas.remove();
-        delete currentCanvas;
-
-        if (template_orientation) {
-          create4x6_landscape(photo);
-          template_orientation = false;
-        } else {
-          create4x6_portrait(photo);
-          template_orientation = true;
-        }
-      } else {
-        console.error("No photo uploaded?")
-        alert("Please upload a photo first 😅");
-      }
-    }
-
-    function create4x6_portrait(photo_html) {
-      console.log("Creating portrait")
-      let canvas = document.createElement("canvas");
-      canvas.setAttribute("id", "photo_canvas");
-      canvas.setAttribute("width", photo_html.width * 2);
-      canvas.setAttribute("height", photo_html.height * 3);
-    canvas.setAttribute("style","padding-left:10px;")
-      canvas.classList.add("responsive");
-      document.body.appendChild(canvas);
-      let html_canvas = document
-        .getElementById("photo_canvas")
-        .getContext("2d");
-
-      html_canvas.drawImage(photo_html, 0, 0);
-      html_canvas.drawImage(photo_html, photo_html.clientWidth, 0);
-      html_canvas.drawImage(photo_html, 0, photo_html.clientWidth);
-      html_canvas.drawImage(
-        photo_html,
-        photo_html.clientWidth,
-        photo_html.clientWidth
-      );
-      html_canvas.drawImage(photo_html, 0, photo_html.clientWidth * 2);
-      html_canvas.drawImage(
-        photo_html,
-        photo_html.clientWidth,
-        photo_html.clientWidth * 2
-      );
-      console.log("Created portrait 4x6 photo.");
-    }
-
-    function create4x6_landscape(photo_html) {
-      console.log("Creating landscape")
-      let canvas = document.createElement("canvas");
-      canvas.setAttribute("id", "photo_canvas");
-      canvas.setAttribute("width", photo_html.height * 3);
-      canvas.setAttribute("height", photo_html.width * 2);
-   canvas.setAttribute("style", "padding-left: 10px;")
-      canvas.classList.add("responsive");
-      document.body.appendChild(canvas);
-      let html_canvas = document
-        .getElementById("photo_canvas")
-        .getContext("2d");
-
-      html_canvas.drawImage(photo_html, 0, 0);
-      html_canvas.drawImage(photo_html, photo_html.clientWidth, 0);
-      html_canvas.drawImage(photo_html, photo_html.clientWidth * 2, 0);
-      html_canvas.drawImage(photo_html, 0, photo_html.clientWidth);
-      html_canvas.drawImage(
-        photo_html,
-        photo_html.clientWidth,
-        photo_html.clientWidth
-      );
-      html_canvas.drawImage(
-        photo_html,
-        photo_html.clientWidth * 2,
-        photo_html.clientWidth
-      );
-      console.log("Created landscape 4x6 photo.");
-    }
-
-    function downloadCanvas() {
-      console.log("Downloading 4x6")
-      if (fileUploaded) {
-        let html_canvas = document.getElementById("photo_canvas");
-        let export_photo = html_canvas.toDataURL("image/jpeg", 0.8);
-
-        let file = document.createElement("a");
-        file.href = export_photo;
-        file.download = "600x600PassportPhoto";
-        file.click();
-      } else {
-        console.error("No photo uploaded?")
-        alert("Please upload a photo first 😅");
-      }
-    }
-  </script>
-  <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
-  <script>
-    function initPayPalButton() {
-      paypal.Buttons({
-        style: {
-          shape: 'rect',
-          color: 'gold',
-          layout: 'vertical',
-          label: 'paypal',
-          
-        },
-
-        createOrder: function(data, actions) {
-          return actions.order.create({
-            purchase_units: [{"amount":{"currency_code":"USD","value":2.46}}]
-          });
-        },
-
-        onApprove: function(data, actions) {
-          return actions.order.capture().then(function(orderData) {
-            
-            // Full available details
-            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
-
-            // Show a success message within this page, e.g.
-            const element = document.getElementById('paypal-button-container');
-            element.innerHTML = '';
-            element.innerHTML = '<h3>Thank you for your payment!</h3>';
-
-            // Or go to another URL:  actions.redirect('thank_you.html');
-            
-          });
-        },
-
-        onError: function(err) {
-          console.log(err);
-        }
-      }).render('#paypal-button-container');
-    }
-    initPayPalButton();
-  </script>
-  <!-- JavaScript Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+<script src="index.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
-
 </html>
-
-
-
-
-  
