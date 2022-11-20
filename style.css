@@ -1,65 +1,137 @@
-.header-action {
-    display: flex;
-    flex-direction: row;
-    gap: 3em;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
 
-  #orientation-btn{
+#orientation-btn{
+    margin: 5px;
     border-radius: 15px;
-    border-width: 0.1;
-    text-align: center;
-  }
-  .frame {
-   
-    display: inline-block;
+
+}
+
+#orientation-btn:hover {
+    background-color: #2176ff;
+    color: white;
+}
+
+#input-photo:hover {
+    background-color: #2176ff;
+    color: white;
+}
+
+#download:hover {
+    background-color: #2176ff;
+    color: white;
+}
+
+
+#download{
+    margin: 5px;
+    border-radius: 15px;
+}
+
+#input-photo{
+    margin: 5px;
+    border-radius: 15px;
+}
+
+.card {
+    width: 350px;
+    background: #4badf7;
+    border-radius: 20px;
+    border: none
+}
+
+.circle {
+    height: 56px;
+    width: 56px;
+    line-height: 60px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: relative;
+    left: 28px;
+    top: 66px;
+    -webkit-transition: height .25s ease, width .25s ease;
+    transition: height .25s ease, width .25s ease;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+}
+
+.circle i {
+    margin-left: 17px;
+    color: #4badf7;
+    font-size: 20px
+}
+
+.circle:before,
+.circle:after {
+    content: '';
+    display: block;
     position: absolute;
-    padding-left: 15px;
-    
-  }
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 50%;
+    border: 1px solid #fff
+}
 
-  #download{
-    text-align: center;
-    border-radius: 15px;
-  }
+.circle:before {
+    -webkit-animation: ripple 2s linear infinite;
+    animation: ripple 2s linear infinite
+}
 
-  #header-image {
-    justify-content: right;
-    align-content: center;
-  }
+.circle:after {
+    -webkit-animation: ripple 2s linear 1s infinite;
+    animation: ripple 2s linear 1s infinite
+}
 
-  .responsive {
-    height: auto;
-    width: auto;
-    max-width: 100%;
-  }
-
-  #input-photo {
-    margin-bottom: 2em;
-  }
-
-  * {
-    box-sizing: border-box;
-  }
-  
-  /* Create two equal columns that floats next to each other */
-  .column {
-    float: left;
-    width: 50%;
-    padding: 10px;
-    height: 300px; /* Should be removed. Only for demonstration */
-  }
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
+@-webkit-keyframes ripple {
+    0% {
+        -webkit-transform: scale(1)
     }
-  }
 
+    75% {
+        -webkit-transform: scale(1.75);
+        opacity: 1
+    }
+
+    100% {
+        -webkit-transform: scale(2);
+        opacity: 0
+    }
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(1)
+    }
+
+    75% {
+        transform: scale(1.75);
+        opacity: 1
+    }
+
+    100% {
+        transform: scale(2);
+        opacity: 0
+    }
+}
+.custom{
+    border-radius: 40px;
+    box-shadow: 1px 1px 1px  black;
+    outline: none;
+}
+
+.button {
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 30px;
+    text-align: center;
+    color: #4badf7;
+}
+.custom2{
+    border:none;
+    width: 220px;
+    outline: none;
+}
