@@ -72,14 +72,16 @@
       <h6 style="text-align: center; font-family: 'Carter One', cursive;">Upload your photo before making payment <br> then make payment to download your photo.</h6>
         <br>
     </div>
-    <div class="col-sm">
-    <div style="text-align: center;">
-    <div id="paypal-button-container" style="height: 15px;"></div>
-    </div>
+     <div class="col-sm">
+     <!-- Replace "test" with your own sandbox Business account app client ID -->
+    <script src="https://www.paypal.com/sdk/js?client-id=AQn7hU-qacde22D-7yGCYykYc0gF8pVDWCsbWn-vgbm2ysp6FcFaCJW0TwX9m3H8FOYiG6Aeg-BrFmFs
+     &currency=USD"></script>
+    <!-- Set up a container element for the button -->
+    <div id="paypal-button-container"></div>
     </div>
   </div>
 </div>
-
+    
 <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
 <script src="index.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
