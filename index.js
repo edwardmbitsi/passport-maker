@@ -75,29 +75,19 @@ console.log("Script started: " + length);
         //Must do memory management for object URLs. They'll be released when the user leaves the website.
         URL.revokeObjectURL(PhotoLiveURL);
       }
+
+      
+
       //Only one photo can be uploaded, thus only check 1st element.
       PhotoLiveURL = URL.createObjectURL(fileList[0]);
       let checkImg = new Image();
       checkImg.src = PhotoLiveURL;
       checkImg.onload = function () {
-        if (checkImg.width != checkImg.height) {
-          isSquare = false;
-          fileUploaded = false;
-          console.error("Not a square photo, need to resize.");
-          alert("Not a square photo!\nPlease use the photo cropping tool provided above by the US State Department.")
-        }
-        else {
-          isSquare = true;
-          //Resize if needed.
-          resize(checkImg);
-          if (isSquare) {
-            console.log("Square photo, show the file.")
+        
             showFile(fileList);
             fileUploaded = true;
           }
         }
-      };
-    }
 
     function resize(resizeMe) {
       console.log("Resizing photo...")
@@ -107,8 +97,8 @@ console.log("Script started: " + length);
       //Thank you https://hacks.mozilla.org/2011/01/how-to-develop-a-html5-image-uploader/
       let canvas = document.createElement("canvas");
       // Feel free to change
-      let MAX_WIDTH = 600;
-      let MAX_HEIGHT = 600;
+      let MAX_WIDTH = 1080;
+      let MAX_HEIGHT = 1080;
       let width = resizeMe.width;
       let height = resizeMe.height;
 
@@ -184,7 +174,8 @@ console.log("Script started: " + length);
       let canvas = document.createElement("canvas");
       canvas.setAttribute("id", "photo_canvas");
       canvas.setAttribute("width", photo_html.width * 2);
-      canvas.setAttribute("height", photo_html.height * 3);
+      canvas.setAttribute("height", photo_html.height * 2);
+    canvas.setAttribute("style","padding-left:10px;")
       canvas.classList.add("responsive");
       document.body.appendChild(canvas);
       let html_canvas = document
@@ -212,8 +203,9 @@ console.log("Script started: " + length);
       console.log("Creating landscape")
       let canvas = document.createElement("canvas");
       canvas.setAttribute("id", "photo_canvas");
-      canvas.setAttribute("width", photo_html.height * 3);
+      canvas.setAttribute("width", photo_html.height * 2);
       canvas.setAttribute("height", photo_html.width * 2);
+   canvas.setAttribute("style", "padding-left: 10px;")
       canvas.classList.add("responsive");
       document.body.appendChild(canvas);
       let html_canvas = document
@@ -237,6 +229,8 @@ console.log("Script started: " + length);
       console.log("Created landscape 4x6 photo.");
     }
 
+    
+
     function downloadCanvas() {
       console.log("Downloading 4x6")
       if (fileUploaded) {
@@ -245,10 +239,12 @@ console.log("Script started: " + length);
 
         let file = document.createElement("a");
         file.href = export_photo;
-        file.download = "600x600PassportPhoto";
+        file.download = "4x6PassportPhoto";
         file.click();
       } else {
         console.error("No photo uploaded?")
         alert("Please upload a photo first 😅");
       }
     }
+
+    
