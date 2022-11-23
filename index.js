@@ -46,12 +46,12 @@ console.log("Script started: " + length);
 
     function handleFiles() {
       let fileList = this.files; /* now you can work with the file list */
-      if (fileList.length != 0 && fileList[0].type != "image/jpeg") {
+      if (fileList.length != 0 && fileList[0].type != "image/jpeg/png/jpg") {
         fileUploaded = false;
         console.error("Not a JPEG file.")
         alert("You can only upload a JPEG file at this time.");
         return;
-       } else if (fileList.length == 0) {
+      } else if (fileList.length == 0) {
         fileUploaded = false;
         console.error("No file uploaded, don't run the rest of the script.");
         return;
@@ -118,7 +118,7 @@ console.log("Script started: " + length);
       let ctx_temp = canvas.getContext("2d");
       ctx_temp.drawImage(resizeMe, 0, 0, width, height);
 
-      let resize = canvas.toDataURL("image/jpeg", 1.0);
+      let resize = canvas.toDataURL("image/jpeg/png/jpg", 1.0);
       PhotoLiveURL = resize;
     }
 
@@ -235,7 +235,7 @@ console.log("Script started: " + length);
       console.log("Downloading 4x6")
       if (fileUploaded) {
         let html_canvas = document.getElementById("photo_canvas");
-        let export_photo = html_canvas.toDataURL("image/jpeg", 0.8);
+        let export_photo = html_canvas.toDataURL("image/jpeg/png/jpg", 0.8);
 
         let file = document.createElement("a");
         file.href = export_photo;
