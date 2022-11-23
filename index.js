@@ -46,6 +46,15 @@ console.log("Script started: " + length);
 
     function handleFiles() {
       let fileList = this.files; /* now you can work with the file list */
+      if (fileList.length != 0 && fileList[0].type != "image/jpeg") {
+        fileUploaded = false;
+        console.error("Not a JPEG file.")
+        alert("You can only upload a JPEG file at this time.");
+        return;
+       } else if (fileList.length == 0) {
+        fileUploaded = false;
+        console.error("No file uploaded, don't run the rest of the script.");
+        return;
       }
       console.log("File uploaded.")
 
