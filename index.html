@@ -1,12 +1,14 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet">
-    <title>Visa</title>
+    <link rel="icon" type="image/png" sizes="72x72" href="https://img.icons8.com/3d-fluency/94/null/3d-fluency-photo-gallery.png">
+    <a target="_blank" href="https://icons8.com/icon/wUqJRyU3Sxwa/photo-gallery"></a>
+    <title>Greencard Photo Editor</title>
 </head>
+
 
 
 
@@ -14,9 +16,8 @@
 <nav class="navbar navbar-dark bg-primary">
   <span class="navbar-brand mb-0 h1" style="font-family: 'Caveat', cursive; font-size: 30px;">GreenCard Web</span>
 </nav>
-<p class="text-center" style="padding: 15px; font-family: 'Signika', sans-serif; font-size: 20px; line-height: 1.1; margin: 0;">US Passport 600x600 Photo Template <br> Create a 600x600 photo from your square photo for <b>Ksh 300 only ! <b><br><b> Here is a link to a photo cropping tool to get a square passport photo: <b></br>
-    Use the 1000x1000 dimensions
-<a href="https://biteable.com/tools/image-resizer/" target="_blank"><b>Resize your photo then upload<b></a></p>
+<p class="text-center" style="padding: 15px; font-family: 'Signika', sans-serif; font-size: 20px; line-height: 1.1; margin: 0;">US Passport 600x600 Photo Template <br> Create a 600x600 photo from your square photo for <b>Ksh 300 only ! <b><br><b> Remove photo background and crop on the link down below: <b></br>
+<a href="https://retoucher.online/" target="_blank"><b>Click here to remove background and resize<b></a></p>
 
 <div class="container">
   <div class="row">
@@ -27,14 +28,10 @@
     </div>
     <div class="col-sm">
         <br>
-        <h6 style="text-align: center; font-family: 'Pathway Gothic One', sans-serif; font-size: 25px;">Upload your photo (JPEG) <br> ** Square Photo (1:1) **</h6>
-        <input type="file" accept="image/jpeg" id="input-photo" />
-        <button id="orientation-btn" style="font-family: 'Pathway Gothic One', sans-serif; font-size: 15px;" onclick="toggleOrientation()">
-          Toggle Orientation
-        </button>
-        <button id="download" style="font-family: 'Pathway Gothic One', sans-serif; font-size: 15px;" onclick="downloadCanvas()">
-          Download your Passport Photo
-        </button>
+        <h6 style="text-align: center; font-family: 'Pathway Gothic One', sans-serif; font-size: 25px;">Upload your photo <br> ** Square Photo (1:1) **</h6>
+        <input type="file" accept="image/jpeg/jpg/png" id="input-photo" />
+        
+        
 
     </div>
     <div class="col-sm">
@@ -42,7 +39,8 @@
     <br>
     <br>
      <!-- Replace "test" with your own sandbox Business account app client ID -->
-    <script src="https://www.paypal.com/sdk/js?client-id=AVF64I19OSIg4UEnStkxp6YgMPLQ9XVM0M3_gK1gc-G3QWdbWqJTEvR6m5ugZIBSLNg0lnKO3YEU4zBc&currency=USD"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=AXpoC8HfiQICQ-K5TrGXalOg2U_n9mcVW7GAAoxJGlmD-7Vgu4yaq6GnIcmZp6qJKfwQlnerGs3MIXPB
+&currency=USD"></script>
     <!-- Set up a container element for the button -->
     <div id="paypal-button-container"></div>
 
