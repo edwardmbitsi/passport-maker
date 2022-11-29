@@ -1,4 +1,3 @@
-
 // Paypal
 
  paypal.Buttons({
@@ -18,11 +17,11 @@
       // Successful capture! For dev/demo purposes:
       console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
       const transaction = orderData.purchase_units[0].payments.captures[0];
-      alert(`Transaction ${transaction.status}: ${transaction.id}\n\nSee console for all available details`);
+      alert(`Transaction ${transaction.status}: ${transaction.id}\n\n`);
       // When ready to go live, remove the alert and show a success message within this page. For example:
       // const element = document.getElementById('paypal-button-container');
       // element.innerHTML = '<h3>Thank you for your payment!</h3>';
-      // Or go to another URL:  actions.redirect('thank_you.html');
+       URL:  actions.redirect('success.html');
     });
   }
 }).render('#paypal-button-container');
@@ -46,12 +45,7 @@ console.log("Script started: " + length);
 
     function handleFiles() {
       let fileList = this.files; /* now you can work with the file list */
-      if (fileList.length != 0 && fileList[0].type != "image/jpg") {
-        fileUploaded = false;
-        console.error("Not a JPG file.")
-        alert("You can only upload a JPEG file at this time.");
-        return;
-      } else if (fileList.length == 0) {
+      if (fileList.length == 0) {
         fileUploaded = false;
         console.error("No file uploaded, don't run the rest of the script.");
         return;
@@ -97,8 +91,8 @@ console.log("Script started: " + length);
       //Thank you https://hacks.mozilla.org/2011/01/how-to-develop-a-html5-image-uploader/
       let canvas = document.createElement("canvas");
       // Feel free to change
-      let MAX_WIDTH = 1080;
-      let MAX_HEIGHT = 1080;
+      let MAX_WIDTH = 600;
+      let MAX_HEIGHT = 600;
       let width = resizeMe.width;
       let height = resizeMe.height;
 
@@ -118,7 +112,7 @@ console.log("Script started: " + length);
       let ctx_temp = canvas.getContext("2d");
       ctx_temp.drawImage(resizeMe, 0, 0, width, height);
 
-      let resize = canvas.toDataURL("image/jpg", 1.0);
+      let resize = canvas.toDataURL("image/jpg/", 1.0);
       PhotoLiveURL = resize;
     }
 
